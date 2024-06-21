@@ -41,3 +41,7 @@ class Doctor(User):
         if len(reviews) == 0:
             return 0
         return sum([review.rating_stars for review in reviews]) / len(reviews)
+
+class Staff(models.Model):
+        UserName=models.CharField(max_length=200)
+        UserPassword=models.CharField(max_length=200)

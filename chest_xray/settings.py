@@ -43,6 +43,8 @@ INSTALLED_APPS = [
     'users',
     'reviews',
     'Chat',
+    'users.apps.UsersConfig',
+    'corsheaders',
 ]
 
 MIDDLEWARE = [
