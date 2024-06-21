@@ -33,3 +33,10 @@ class Patient(User):
 class Doctor(User):
     about = models.TextField(null=True)
     description = models.TextField(null=True)
+
+    @property
+    def rating(self):
+        reviews = self.review_set.all()
+        if len(reviews) == 0:
+            return 0
+        return sum([review.rating_stars for review in reviews]) / len(reviews)
