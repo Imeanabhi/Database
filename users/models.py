@@ -29,6 +29,7 @@ class Patient(User):
     medication = models.TextField(null=True)
     weight = models.FloatField(null=True)
     height = models.FloatField(null=True)
+    xray_scan = models.ImageField(null=True)
 
 class Doctor(User):
     about = models.TextField(null=True)
@@ -40,7 +41,3 @@ class Doctor(User):
         if len(reviews) == 0:
             return 0
         return sum([review.rating_stars for review in reviews]) / len(reviews)
-    
-class Staff(models.Model):
-    UserName=models.CharField(max_length=200)
-    UserPassword=models.CharField(max_length=200)
