@@ -43,7 +43,7 @@ INSTALLED_APPS = [
     'reviews',
     'Chat',
     'corsheaders',
-    'users'
+    'users',
     'rest_framework',
 ]
 

@@ -45,3 +45,4 @@ class Doctor(User):
 class Staff(models.Model):
     UserName=models.CharField(max_length=200)
     UserPassword=models.CharField(max_length=200)
+    
