@@ -29,6 +29,7 @@ class Patient(User):
     medication = models.TextField(null=True)
     weight = models.FloatField(null=True)
     height = models.FloatField(null=True)
+    xray_scan = models.ImageField(null=True)
 
 class Doctor(User):
     about = models.TextField(null=True)
